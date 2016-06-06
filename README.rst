@@ -1,4 +1,4 @@
-FukuML
+FukuML Tutorial
 =========
 
 .. image:: https://travis-ci.org/fukuball/fuku-ml.svg?branch=master
@@ -16,7 +16,9 @@ FukuML
 .. image:: https://img.shields.io/badge/made%20with-%e2%9d%a4-ff69b4.svg
     :target: http://www.fukuball.com
 
-Simple machine learning library / 簡單易用的機器學習套件
+Tutorial of `FukuML`_, Simple machine learning library / 簡單易用的機器學習套件 `FukuML`_ 教學手冊
+
+.. _FukuML: https://github.com/fukuball/fuku-ml
 
 Installation
 ============
@@ -100,52 +102,6 @@ Algorithm
 - Legendre Feature Transform
 
 - 10 Fold Cross Validation
-
-Usage
-============
-
-.. code-block:: py
-
-    >>> import numpy as np
-    # we need numpy as a base libray
-
-    >>> import FukuML.PLA as pla
-    # import FukuML.PLA to do Perceptron Learning
-
-    >>> your_input_data_file = '/path/to/your/data/file'
-    # assign your input data file, please check the data format: https://github.com/fukuball/fuku-ml/blob/master/FukuML/dataset/pla_binary_train.dat
-
-    >>> pla_bc = pla.BinaryClassifier()
-    # new a PLA binary classifier
-
-    >>> pla_bc.load_train_data(your_input_data_file)
-    # load train data
-
-    >>> pla_bc.set_param()
-    # set parameter
-
-    >>> pla_bc.init_W()
-    # init the W
-
-    >>> W = pla_bc.train()
-    # train by Perceptron Learning Algorithm to find best W
-
-    >>> test_data = 'Each feature of data x separated with spaces. And the ground truth y put in the end of line separated by a space'
-    # assign test data, format like this '0.97681 0.10723 0.64385 ........ 0.29556 1'
-
-    >>> prediction = pla_bc.prediction(test_data)
-    # prediction by trained W
-
-    >>> print prediction['input_data_x']
-    # print test data x
-
-    >>> print prediction['input_data_y']
-    # print test data y
-
-    >>> print prediction['prediction']
-    # print the prediction, will find out prediction is the same as pla_bc.test_data_y
-
-For detail, please check https://github.com/fukuball/fuku-ml/blob/master/doc/sample_code.rst
 
 License
 =========
